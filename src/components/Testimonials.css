@@ -1,0 +1,160 @@
+.testimonials {
+  padding: 100px 0;
+  background: #fdf6ee;
+}
+
+.test-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.test-header .section-desc {
+  margin: 0 auto;
+}
+
+/* Testimonial cards grid */
+.test-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 56px;
+}
+
+.test-card {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  border: 1.5px solid #f0f0f0;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  position: relative;
+}
+
+.test-card::before {
+  content: '"';
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  font-size: 4rem;
+  font-family: 'Playfair Display', serif;
+  color: rgba(232,86,42,0.1);
+  line-height: 1;
+}
+
+.test-card:hover,
+.test-card.active {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(232,86,42,0.12);
+  border-color: rgba(232,86,42,0.3);
+}
+
+.test-stars {
+  color: #f5a623;
+  font-size: 1.1rem;
+  letter-spacing: 3px;
+  margin-bottom: 16px;
+}
+
+.test-text {
+  font-size: 0.95rem;
+  color: #555577;
+  line-height: 1.8;
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.test-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.test-avatar {
+  width: 48px;
+  height: 48px;
+  background: rgba(232,86,42,0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+.test-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #1a1a2e;
+  margin-bottom: 4px;
+}
+
+.test-route {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+/* Summary bar */
+.test-summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  max-width: 700px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.summary-stars {
+  color: #f5a623;
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+}
+
+.summary-score {
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  color: #1a1a2e;
+}
+
+.summary-num {
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  color: #e8562a;
+}
+
+.summary-label {
+  font-size: 0.8rem;
+  color: #aaa;
+  font-weight: 500;
+}
+
+.summary-divider {
+  width: 1px;
+  height: 48px;
+  background: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  .test-grid {
+    grid-template-columns: 1fr;
+  }
+  .testimonials {
+    padding: 70px 0;
+  }
+  .summary-divider { display: none; }
+}
